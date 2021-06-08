@@ -96,11 +96,6 @@ for i in range(len(frases)):
         palabras_sintaxis[Titulo] = lista_palabras
         print(palabras_sintaxis)
 
-    
-
-
-        
-
 
 dir = 'C:/Users/admin/Desktop/TFG/final'  # También es válido 'C:\\Pruebas' o r'C:\Pruebas'
 file_name = "data.json"
