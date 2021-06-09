@@ -2,10 +2,11 @@
 
 Programa Python y Java para la creación de una ontología a partir de técnicas de Procesamiento de Lenguaje Natural.
 
-## Instalación
-
-Descargar e intalar Anaconda (https://www.anaconda.com/products/individual-b)  
-  - Paso 1 : Instalar spaCy  
+##Pre-requisitos
+Descargar e instalar Anaconda (https://www.anaconda.com/products/individual-b)   
+Anaconda instala automaticamente Python  
+Librerias necesarias para el funcionamiento del primer programa: 
+   - Paso 1 : Instalar spaCy  
    En la consola de Anaconda se lanza el siguiente comando
    ```bash
    conda install -c conda-forge spacy
@@ -15,6 +16,32 @@ Descargar e intalar Anaconda (https://www.anaconda.com/products/individual-b)
   ```bash
    python -m spacy download en_core_web_md # larger English model 
    ```
+
+## Instalación
+
+Descargar **PLN-TFG-Maria.py** y **TFG-Maria-Ciber** de github 
+Se abre la consola de git en la carpeta en la que se desea descargar los programas y se lanza lo siguiente:
+```bash
+git clone https://github.com/mariacarreira3/TFG.git
+```
+Dentro de la carpeta TFG se vuelve a abrir la consola que deberia estar en la rama (main) cambiar a master con el siguiente comando:
+```bash
+git fetch && git checkout master
+```
+Se vuelve a lanzar el siguiente comando: 
+```bash
+git clone https://github.com/mariacarreira3/TFG.git
+```
+En la carpeta habran aparecido **PLN-TFG-Maria.py** y **TFG-Maria-Ciber**
+
+Además la herramienta Java (**TFG-Maria-Ciber**) se puede importar desde Eclipse.  
+
+  1. Abrir File->Import… y seleccionar Git->Projects from Git ( with smart import).  
+  2. En la siguiente pantalla, hay que seleccionar “Clone URI”.  
+  3. Proporcionamos la url del repositorio en el campo URI, el resto se rellenará de forma automática.
+  4. Seleccionar la rama master.
+  5. Al pulsar finish se descargará el repositorio.
+ 
 ## Estructura directorios
 
 En la carpeta se encuentran dos herramientas cuyo objetivo es la creación de una ontología.  
