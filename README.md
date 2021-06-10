@@ -2,7 +2,7 @@
 
 Programa Python y Java para la creación de una ontología a partir de técnicas de Procesamiento de Lenguaje Natural.
 
-##Pre-requisitos
+## Pre-requisitos
 Descargar e instalar Anaconda (https://www.anaconda.com/products/individual-b)   
 Anaconda instala automaticamente Python  
 Librerias necesarias para el funcionamiento del primer programa: 
