@@ -67,41 +67,57 @@ public class TFG_Maria {
 			JSONArray dataArray = (JSONArray) data.get(i);
 			System.out.println(dataArray);
 			
-			for (int i3 = 0; i3 < dataArray.size(); i3++) {
-				System.out.println(dataArray.get(i3));
-				JSONObject data2 = (JSONObject) dataArray.get(i3);
-				System.out.println(data2);
+			try {
 			
+				for (int i3 = 0; i3 < dataArray.size(); i3++) {
+					System.out.println(dataArray.get(i3));
+					JSONObject data2 = (JSONObject) dataArray.get(i3);
+					System.out.println(data2);
 				
-				Set<?> keys2 = data2.keySet();
-				for(Object i2: keys2) {
-					System.out.println(i2);	
-					// Clase para agrupar
-					OntClass ing = 	ontModel.createClass(base_uri + i2);
-					JSONArray clases = (JSONArray) data2.get(i2);
-					System.out.println(clases);
-		
-					// Crea las keys del JSON como clases
-					OntClass c2 = ontModel.createClass(base_uri + i2);
-					System.out.println(c2);
-					c.addSubClass(ontModel.createSomeValuesFromRestriction(null, has, c2 ));
-					// Crea clase 
-					for (Object a: clases) {
-						
-						// Incluye todos los elementos de los arrays 
-						OntClass c_aux = ontModel.createClass(base_uri + a);
-						ing.addSubClass(c_aux);
-						System.out.println(c_aux);
-						
-						// Crea las relaciones como restricciones
-						c.addSubClass(ontModel.createSomeValuesFromRestriction(null, has, c_aux ));
-						
-						
-					}
 					
+					Set<?> keys2 = data2.keySet();
+					for(Object i2: keys2) {
+						System.out.println(i2);	
+						// Clase para agrupar
+						OntClass ing = 	ontModel.createClass(base_uri + i2);
+						JSONArray clases = (JSONArray) data2.get(i2);
+						System.out.println(clases);
 			
+						// Crea las keys del JSON como clases
+						OntClass c2 = ontModel.createClass(base_uri + i2);
+						System.out.println(c2);
+						c.addSubClass(ontModel.createSomeValuesFromRestriction(null, has, c2 ));
+						// Crea clase 
+						for (Object a: clases) {
+							
+							// Incluye todos los elementos de los arrays 
+							OntClass c_aux = ontModel.createClass(base_uri + a);
+							ing.addSubClass(c_aux);
+							System.out.println(c_aux);
+							
+							// Crea las relaciones como restricciones
+							c.addSubClass(ontModel.createSomeValuesFromRestriction(null, has, c_aux ));
+							
+							
+						}
+						
+				
+					}
 				}
 			}
+			catch (Exception e) {
+				OntClass ing = 	ontModel.createClass(base_uri + i);
+				for (Object a: dataArray) {
+					
+					// Incluye todos los elementos de los arrays como ingredientes
+					OntClass c_aux = ontModel.createClass(base_uri + a);
+					ing.addSubClass(c_aux);
+					
+					// Crea las relaciones como restricciones
+					c.addSubClass(ontModel.createSomeValuesFromRestriction(null, has, c_aux ));
+				}
+			}
+			
 		
 
 		// Se guarda
