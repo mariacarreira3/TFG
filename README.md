@@ -5,7 +5,7 @@ Programa Python y Java para la creación de una ontología a partir de técnicas
 ## Prerequisitos
 Descargar e instalar Anaconda (https://www.anaconda.com/products/individual-b)   
 Anaconda instala automaticamente Python  
-Librerias necesarias para el funcionamiento del primer programa: 
+Librerías necesarias para el funcionamiento del primer programa: 
    - Paso 1 : Instalar spaCy  
    En la consola de Anaconda se lanza el siguiente comando
    ```bash
@@ -32,7 +32,7 @@ Se vuelve a lanzar el siguiente comando:
 ```bash
 git clone https://github.com/mariacarreira3/TFG.git
 ```
-En la carpeta habran aparecido **PLN-TFG-Maria.py** y **TFG-Maria-Ciber**
+En la carpeta habrán aparecido **PLN-TFG-Maria.py** y **TFG-Maria-Ciber**
 
 Además la herramienta Java (**TFG-Maria-Ciber**) se puede importar desde Eclipse.  
 
@@ -65,9 +65,9 @@ Despues se lanza e programa java para la creación de la ontología.
 
 ## Uso programa Java
   - Abrir proyecto en eclipse
-  - Antes de lanzar la aplicación cambiar en la linea 38 la ruta en la que se quiere que se cree el fichero de ontología, acabando con el nombre de la ontología deseada (Ej: C:/Users/admin/Desktop/Ciber.owl).  
-  - Tambien cambiar en la linea 56 la ruta en la que esta situado el archivo JSON generado por el programa anterior.  
-  - Se lanza la aplicación, al acabar se ha debido generar el fichero de la ontología en la ruta que se ha escrito en la linea 38.  
+  - Antes de lanzar la aplicación cambiar en la línea 38 la ruta en la que se quiere que se cree el fichero de ontología, acabando con el nombre de la ontología deseada (Ej: C:/Users/admin/Desktop/Ciber.owl).  
+  - También cambiar en la línea 56 la ruta en la que esta situado el archivo JSON generado por el programa anterior.  
+  - Se lanza la aplicación, al acabar se ha debido generar el fichero de la ontología en la ruta que se ha escrito en la línea 38.  
   - Se puede abrir la ontología creada en Protege.exe.  
 
 
