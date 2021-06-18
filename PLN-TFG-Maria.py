@@ -6,7 +6,7 @@ import json
 nlp = en_core_web_sm.load() #Esto devolverá un objeto de idioma que contiene todos los componentes y datos necesarios para procesar el texto.
 
 
-text = input("Text:")
+text = input("Enter the text you want to process:")
 doc = nlp(text)
 print (doc)
 palabras_sintaxis = {}
